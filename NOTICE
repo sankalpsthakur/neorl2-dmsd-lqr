@@ -1,0 +1,7 @@
+neorl2-dmsd-lqr
+Copyright 2026 Sankalp Thakur. Code in this repository: Apache-2.0 (LICENSE).
+
+Benchmark: NeoRL-2 (Gao, Tu, Qin, Sun, Chen, Yu; arXiv 2503.19267), https://github.com/polixir/NeoRL2 and https://huggingface.co/datasets/polixirai/NeoRL2.
+No NeoRL-2 data or source file is redistributed here. The upstream licence is stated two ways: the Hub dataset card says apache-2.0; the GitHub README says datasets are CC BY 4.0 and code is Apache 2.0. Both are cited; attribution as above.
+src/nd/env.py is our own numpy re-implementation of the DMSD dynamics, written from the public source and checked episode by episode against the official simulator.
+protocol/frozen_config.json (the identified model and the 12-number gain) is derived from the benchmark's offline data.

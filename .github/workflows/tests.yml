@@ -1,0 +1,19 @@
+name: tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install numpy pytest
+      - run: python -m pytest -q -p no:cacheprovider tests
+      - name: Re-score the frozen gain with the replica
+        run: python -c "import json,sys; sys.path.insert(0,'src'); from nd import env, model; p=model.policy_from_config(json.load(open('protocol/frozen_config.json'))); m=[float(env.score_seed_set(p,s).mean()) for s in (7,42,210)]; print(m); assert all(abs(a-b)<1e-3 for a,b in zip(m,(97.776951,97.826005,97.738273)))"

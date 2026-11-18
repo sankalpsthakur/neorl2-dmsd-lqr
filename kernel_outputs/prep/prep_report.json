@@ -1,0 +1,189 @@
+{
+ "action_max_abs": 1.0,
+ "action_saturated_frac": [
+  0.64053,
+  0.04984
+ ],
+ "all_len_100": true,
+ "continuity_train": 0.0,
+ "continuity_val": 0.0,
+ "data_raw_return": 494.4527170294737,
+ "data_score": 56.64269785806422,
+ "data_trajectories": 1000,
+ "edge": {
+  "controller_numbers": 12,
+  "float32_bytes": 48,
+  "identified_numbers": 24,
+  "numpy_latency_us_per_call_kaggle_cpu": 18.3
+ },
+ "episode_boundaries": "flags",
+ "episodes_train": 1000,
+ "episodes_val": 200,
+ "finite_action": true,
+ "finite_next_obs": true,
+ "finite_obs": true,
+ "finite_reward": true,
+ "frozen_sha256": "c3f031e99dbdfa12228f5f02add8745206754811b8dca6dc2e28e8b71dbec509",
+ "g0a_expected": {
+  "data_raw": 494.4527,
+  "data_raw_tol": 0.05,
+  "episodes_train": 1000,
+  "episodes_val": 200,
+  "rows_train": 100000,
+  "rows_val": 20000
+ },
+ "g0a_pass": true,
+ "hub_files": {
+  "train": {
+   "bytes": 6440308,
+   "sha256": "873c06c4e8a1e12f2e0f8ad4222a0860f4b67fa3af90a61b7f1d9287b51006dd"
+  },
+  "val": {
+   "bytes": 1208889,
+   "sha256": "8fae5155fd63a49dd76dab19413f6ecda5aedb6013a2ee55f0e61822c33fbc2b"
+  }
+ },
+ "ident": {
+  "A": [
+   [
+    0.9999999999715845,
+    -6.937575514065486e-13,
+    0.20000000009749366,
+    3.358008131542495e-11
+   ],
+   [
+    3.920007747378865e-11,
+    0.9999999999804107,
+    -2.4472986137613617e-10,
+    0.1999999998282183
+   ],
+   [
+    -0.04000000000748356,
+    0.020000000011126368,
+    0.9200000000647326,
+    0.03999999995507008
+   ],
+   [
+    0.02000000002030118,
+    -0.04000000002817533,
+    0.0399999999897331,
+    0.920000000079638
+   ]
+  ],
+  "B": [
+   [
+    5.597309855193133e-11,
+    -2.853187131002244e-11
+   ],
+   [
+    -5.888589615921092e-11,
+    1.2089518275359978e-10
+   ],
+   [
+    0.3000000000311623,
+    -2.501959750489391e-11
+   ],
+   [
+    -3.5194361314161426e-11,
+    0.3000000001401294
+   ]
+  ],
+  "audit_vs_physics": {
+   "max_abs_A": 2.4472986137613617e-10,
+   "max_abs_B": 1.4012935256602077e-10
+  },
+  "intercept_fit": {
+   "cond": 4.093905885042376,
+   "max_abs": 2.2046024650279605e-07,
+   "max_abs_c": 1.852779041300323e-11,
+   "rms": 2.3940027209884785e-08
+  },
+  "train": {
+   "cond": 3.847355609095064,
+   "max_abs": 2.2044310421520663e-07,
+   "rms": 2.3940031673142302e-08
+  },
+  "val_one_step_max_abs": 1.1942267685860486e-07
+ },
+ "ident_pass": true,
+ "official_npz": {
+  "train": {
+   "bytes": 4117923,
+   "keys": [
+    "action",
+    "done",
+    "next_obs",
+    "obs",
+    "reward",
+    "truncated"
+   ],
+   "max_abs_diff_action": 0.0,
+   "max_abs_diff_next_obs": 0.0,
+   "max_abs_diff_obs": 0.0,
+   "md5": "88dfa39aa18904e809056b51c2e6319b",
+   "md5_ok": true,
+   "reachable": true
+  },
+  "val": {
+   "bytes": 790776,
+   "keys": [
+    "action",
+    "done",
+    "next_obs",
+    "obs",
+    "reward",
+    "truncated"
+   ],
+   "max_abs_diff_action": 0.0,
+   "max_abs_diff_next_obs": 0.0,
+   "max_abs_diff_obs": 0.0,
+   "md5": "be6c39c0e73c17029206e714068f26b7",
+   "md5_ok": true,
+   "reachable": true
+  }
+ },
+ "regime_check": {
+  "frac_visited_above_train_max": 0.0,
+  "lev_ratio_max": 0.9016004798575024,
+  "lev_ratio_p99": 1.269994149822935,
+  "lev_train_max": 0.000752721573161948,
+  "lev_train_p99": 0.0002598564649700785,
+  "lev_visited_max": 0.0006786541315619063,
+  "lev_visited_p99": 0.0003300161903056681,
+  "max_range_excess_per_coord": [
+   0.0,
+   0.0,
+   0.07544264290121383,
+   0.006398656025313532,
+   0.0,
+   0.0
+  ],
+  "n_visited": 20000,
+  "note": "report-only; true one-step error in the LQR regime cannot be measured offline (no data under that policy); see PREREGISTRATION Amendment 1",
+  "train_range_per_coord": [
+   3.8331767320632935,
+   5.194616079330444,
+   4.073904633522034,
+   3.880743384361267,
+   2.0,
+   2.0
+  ]
+ },
+ "reward_recompute_max_abs": 0.0,
+ "rows_train": 100000,
+ "rows_val": 20000,
+ "seconds": 17,
+ "selected": {
+  "qp": 100.0,
+  "qv": 10.0,
+  "rho": 0.48522310966071924,
+  "status": "ok",
+  "val_return": 825.1316422488089
+ },
+ "selected_val_score_normalised": 97.02307240707879,
+ "target_range": [
+  -1.4989663362503052,
+  1.4993618726730347
+ ],
+ "utc": "2026-11-18T16:26:53Z"
+}

@@ -1,0 +1,16 @@
+{
+ "dataset": "polixirai/NeoRL2",
+ "hub_revision": "d528956f2d4c3aaefe7314f5615307214841bbcc",
+ "read": "2026-11-18 via https://huggingface.co/api/datasets/polixirai/NeoRL2/tree/main/DMSD/{train,val} (LFS oids are sha256)",
+ "files": {
+  "DMSD/train/DMSD-train.parquet": {"bytes": 6440308, "sha256": "873c06c4e8a1e12f2e0f8ad4222a0860f4b67fa3af90a61b7f1d9287b51006dd", "rows_per_hub": 100000},
+  "DMSD/val/DMSD-val.parquet": {"bytes": 1208889, "sha256": "8fae5155fd63a49dd76dab19413f6ecda5aedb6013a2ee55f0e61822c33fbc2b", "rows_per_hub": 20000}
+ },
+ "columns": ["obs_0","obs_1","obs_2","obs_3","obs_4","obs_5","action_0","action_1","next_obs_0","next_obs_1","next_obs_2","next_obs_3","next_obs_4","next_obs_5","reward","done","truncated"],
+ "dtype": "float32",
+ "github_commit": "b50d91d0a65916a89342a4f6978188b17cb2d97a",
+ "github_commit_date": "2025-10-27T02:08:03Z",
+ "official_npz_md5_info_py": {"DMSD-train.npz": "88dfa39aa18904e809056b51c2e6319b", "DMSD-val.npz": "be6c39c0e73c17029206e714068f26b7"},
+ "official_npz_url": "http://datasets.polixir.site/neorl2/DMSD/DMSD-train.npz",
+ "note": "npz equivalence to the Hub parquet is NOT verified (prep kernel tries and records)."
+}

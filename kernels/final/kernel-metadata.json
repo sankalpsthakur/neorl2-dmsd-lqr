@@ -1,0 +1,15 @@
+{
+ "id": "sankalpsthakur/bench-neorl2-dmsd-final",
+ "title": "bench-neorl2-dmsd-final",
+ "code_file": "script.py",
+ "language": "python",
+ "kernel_type": "script",
+ "is_private": "true",
+ "enable_gpu": "false",
+ "enable_tpu": "false",
+ "enable_internet": "true",
+ "dataset_sources": [],
+ "competition_sources": [],
+ "kernel_sources": ["sankalpsthakur/bench-neorl2-dmsd-prep", "sankalpsthakur/bench-neorl2-dmsd-g0"],
+ "model_sources": []
+}
